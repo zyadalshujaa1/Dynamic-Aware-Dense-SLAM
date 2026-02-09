@@ -106,10 +106,9 @@ In this section, we reflect on the findings from HI-SLAM2 and analyze what can b
  
 ## References
 
-1. Zhang, W., Cheng, Q., Skuddis, D., Zeller, N., Cremers, D., & Haala, N. (2024). *HI-SLAM2: Geometry-Aware Gaussian SLAM for Fast Monocular Scene Reconstruction*. arXiv preprint arXiv:2411.17982. [Link](https://arxiv.org/abs/2411.17982)
+1. Zhang, W., Cheng, Q., Skuddis, D., Zeller, N., Cremers, D., & Haala, N. (2024). *HI-SLAM2: Geometry-Aware Gaussian SLAM for Fast Monocular Scene Reconstruction*. arXiv preprint arXiv:2411.17982.
 
-2. Bescos, B., Fácil, J. M., Civera, J., & Neira, J. (2021). *DynaSLAM II: Tracking, Mapping, and Inpainting in Dynamic Scenes*. IEEE Robotics and Automation Letters, 6(2), 491-498. [Link](https://arxiv.org/abs/2008.07901)
+2. Bescos, B., Fácil, J. M., Civera, J., & Neira, J. (2021). *DynaSLAM II: Tracking, Mapping, and Inpainting in Dynamic Scenes*. IEEE Robotics and Automation Letters, 6(2), 491-498.
 
-3. Li, H., et al. (2018-2021). *DS-SLAM: Semantic Segmentation-based Rejection of Dynamic Features for Robust Real-Time SLAM*. IEEE Transactions on Robotics. [Link](https://github.com/junfenghu/DS-SLAM)
-
+3. Li, H., et al. (2018-2021). *DS-SLAM: Semantic Segmentation-based Rejection of Dynamic Features for Robust Real-Time SLAM*. IEEE Transactions on Robotics. [Link]
 4. Xu, L., et al. (2023). *VI-NeRF-SLAM: Neural Radiance Fields for Dense Visual-Inertial SLAM*. [Link](https://arxiv.org/abs/2304.12345)
