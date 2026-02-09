@@ -72,3 +72,8 @@ Experiments are based on **HI-SLAM2**. Full setup, data preparation, and evaluat
 ![HI-SLAM2 Pipeline](figures/hi_slam2_pipeline.png)
 
 > *Figure: System overview of HI-SLAM2. Pipeline stages include online tracking, loop closing, continuous mapping, and offline refinement.*
+
+
+
+![Meshes](figures/scannet_meshes.png)
+> *Reconstructed meshes of selected sequences: simulated demo.*
