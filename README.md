@@ -104,6 +104,22 @@ In this section, we reflect on the findings from HI-SLAM2 and analyze what can b
   - Implementing simplified simulations based on this pipeline helps understand the trade-offs between accuracy, runtime, and map density.
   - Future experiments can explore combining semantic segmentation, motion filtering, and Gaussian mapping to achieve a system that is both real-time and robust in dynamic environments.
  
+
+## Conclusion
+
+This analysis of HI-SLAM2 provides a comprehensive overview of a state-of-the-art monocular dense SLAM system. By combining classical SLAM techniques with learning-based depth and normal priors, HI-SLAM2 achieves a strong balance between **geometric accuracy** and **dense reconstruction quality**. 
+
+From the simulated experimental results, it is clear that HI-SLAM2 outperforms other RGB-only and RGB-D methods in terms of **accuracy, completeness, and reconstruction ratio**, demonstrating its potential for real-world robotic navigation in indoor environments. The system’s hybrid architecture—decoupling tracking from mapping while maintaining global consistency—proves to be a promising strategy for future dense SLAM frameworks.
+
+Key insights for future work include:  
+- Handling **dynamic objects** and moving agents more robustly.  
+- Enhancing **lighting and texture invariance** for environments with extreme conditions.  
+- Extending semantic integration beyond optional reconstruction to **directly support tracking and mapping**.  
+
+Overall, HI-SLAM2 exemplifies how combining **deep learning priors** with **classical geometric optimization** can lead to efficient, accurate, and scalable dense SLAM systems. These insights provide a clear roadmap for both research exploration and practical application in robotic perception.
+
+
+ 
 ## References
 
 1. Zhang, W., Cheng, Q., Skuddis, D., Zeller, N., Cremers, D., & Haala, N. (2024). *HI-SLAM2: Geometry-Aware Gaussian SLAM for Fast Monocular Scene Reconstruction*. arXiv preprint arXiv:2411.17982.
