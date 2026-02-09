@@ -48,7 +48,7 @@ This approach bridges the gap between:
 - **Dense neural reconstruction** (VI-NeRF-SLAM), and  
 - **High-quality monocular Gaussian SLAM** (HI-SLAM2).
 
-- ## Experimental Overview
+## Experimental Overview
 Experiments are based on **HI-SLAM2**. Full setup, data preparation, and evaluation steps are in [`experiments/README.md`](experiments/README.md).
 
 > The `experiments/` folder contains all detailed instructions and scripts for running demos, preprocessing datasets, and evaluating results.
