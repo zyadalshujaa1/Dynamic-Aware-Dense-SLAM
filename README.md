@@ -34,6 +34,20 @@ There is no existing framework that simultaneously:
 - Maintains real-time performance suitable for robotic navigation in human-populated environments.
 
 ---
+## Comparative Overview of Dynamic-Aware Dense SLAM Methods
+
+| Paper / Method      | Dynamic Handling | Dense Reconstruction | Real-Time | Input Type           | Key Innovation / Gap Addressed |
+|--------------------|----------------|-------------------|-----------|-------------------|--------------------------------|
+| DynaSLAM II (2021)  | Multi-object tracking via semantic segmentation | Sparse (object-centric) | Moderate (~10–12 FPS) | Stereo / RGB-D | Jointly optimizes camera, static map, dynamic object trajectories; lacks dense reconstruction for objects |
+| DS-SLAM (2018)      | Semantic + motion consistency to remove dynamic points | Sparse / Semantic octo-tree | Real-time (~60ms/frame) | RGB-D | Improves pose estimation in dynamic environments; limited to predefined semantic classes |
+| VI-NeRF-SLAM (2023) | None (static scenes only) | Dense NeRF-based | Real-time (~25 FPS) | Monocular / Monocular-Inertial | Combines visual-inertial SLAM with NeRF mapping; cannot handle moving objects |
+| HI-SLAM2 (2025)     | None (assumes static scene) | Dense Gaussian Splatting (3DGS) | Real-time | Monocular RGB | High-fidelity geometry + fast monocular SLAM; no dynamic object awareness |
+
+**Notes / Observations:**  
+- DynaSLAM II and DS-SLAM focus on **dynamic object awareness**, but lack high-fidelity dense maps.  
+- VI-NeRF-SLAM and HI-SLAM2 focus on **dense reconstruction and real-time performance**, but assume static scenes.  
+- **Gap / Opportunity:** No method combines **dense monocular reconstruction + dynamic object awareness + real-time efficiency**. This is where a student project or proposed extension can focus.
+
 
 ## 3. Hypothesis
 
