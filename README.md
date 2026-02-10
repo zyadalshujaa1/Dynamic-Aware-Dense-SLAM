@@ -149,11 +149,13 @@ Experiments are based on **HI-SLAM2**. Full setup, data preparation, and evaluat
 
 2. **Dense Map Visualization**  
    - Side-by-side **3D reconstruction** with and without confidence weighting.  
-   - Highlight moving objects with lower confidence. 
+   - Highlight moving objects with lower confidence.
+   - 
    ![Dense Map Comparison](figures/dense_map_comparison.png)
 
 3. **FPS / Performance Chart**  
-   - Bar chart showing **frame rate comparison**  baseline و proposed approach.  
+   - Bar chart showing **frame rate comparison**  baseline و proposed approach.
+   - 
    ![FPS Comparison](figures/fps_comparison.png)
 
 4. **Impact of Confidence Weighting**  
