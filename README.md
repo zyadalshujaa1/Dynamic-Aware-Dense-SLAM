@@ -142,24 +142,23 @@ Experiments are based on **HI-SLAM2**. Full setup, data preparation, and evaluat
 - Adaptable for **AR/VR applications** or **robotic navigation** in populated indoor environments.
 - Potential extension to **multi-camera setups** or **multi-robot collaborative mapping**.
 
-### Suggested Plots / Figures
 
-1. **Localization Accuracy Plot**  
-   - Line plot comparing **ATE over time** for HI-SLAM2 baseline vs. proposed method on dynamic sequences.  
-   - *Suggested image file:* `figures/localization_ate_plot.png`
+**Localization Accuracy Plot**  
+   - Line plot comparing **ATE over time** لـ HI-SLAM2 baseline vs. proposed method dynamic sequences.  
+   ![Localization Accuracy](figures/localization_ate_plot.png)
 
 2. **Dense Map Visualization**  
    - Side-by-side **3D reconstruction** with and without confidence weighting.  
-   - Highlight moving objects with lower confidence in a different color.  
-   - *Suggested image file:* `figures/dense_map_comparison.png`
+   - Highlight moving objects with lower confidence. 
+   ![Dense Map Comparison](figures/dense_map_comparison.png)
 
 3. **FPS / Performance Chart**  
-   - Bar chart showing **frame rate comparison** between baseline and proposed approach.  
-   - *Suggested image file:* `figures/fps_comparison.png`
+   - Bar chart showing **frame rate comparison**  baseline و proposed approach.  
+   ![FPS Comparison](figures/fps_comparison.png)
 
 4. **Impact of Confidence Weighting**  
-   - Scatter plot or heatmap showing **per-point confidence vs. reconstruction error**.  
-   - *Suggested image file:* `figures/confidence_vs_error.png`
+   - Scatter plot  heatmap showing **per-point confidence vs. reconstruction error**.  
+   ![Confidence vs Error](figures/confidence_vs_error.png)
 
 > *Note: These plots can be generated using the `experiments/` dataset and evaluation scripts.*
 
