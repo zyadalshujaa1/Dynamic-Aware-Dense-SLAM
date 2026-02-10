@@ -190,4 +190,4 @@ Overall, HI-SLAM2 exemplifies how combining **deep learning priors** with **clas
 2. Bescos, B., Fácil, J. M., Civera, J., & Neira, J. (2021). *DynaSLAM II: Tracking, Mapping, and Inpainting in Dynamic Scenes*. IEEE Robotics and Automation Letters, 6(2), 491-498.
 
 3. Li, H., et al. (2018-2021). *DS-SLAM: Semantic Segmentation-based Rejection of Dynamic Features for Robust Real-Time SLAM*. IEEE Transactions on Robotics. [Link]
-4. Xu, L., et al. (2023). *VI-NeRF-SLAM: Neural Radiance Fields for Dense Visual-Inertial SLAM*. [Link](https://arxiv.org/abs/2304.12345)
+4. Xu, L., et al. (2023). *VI-NeRF-SLAM: Neural Radiance Fields for Dense Visual-Inertial SLAM*.
