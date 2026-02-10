@@ -63,6 +63,26 @@ This approach bridges the gap between:
 - **Dense neural reconstruction** (VI-NeRF-SLAM), and
 - **High-quality monocular Gaussian SLAM** (HI-SLAM2).
 
+
+## Proposed Idea: Confidence-Weighted Dynamic Dense SLAM
+
+**Description:**  
+We propose a dynamic-aware dense SLAM approach that integrates motion cues and semantic segmentation with a confidence weighting scheme. Points associated with dynamic objects are included in the map but with lower confidence, reducing their impact on localization and reconstruction.
+
+**Motivation:**  
+Existing dense SLAM systems either ignore dynamic objects or remove them entirely. By leveraging confidence weights, our approach balances dense reconstruction quality with robustness to moving objects, addressing a key gap identified in DynaSLAM II, DS-SLAM, and HI-SLAM2.
+
+**Technical Insight:**  
+- Temporally consistent segmentation identifies dynamic objects.  
+- Dense Gaussian or neural reconstruction is updated with per-point confidence.  
+- Confidence weighting influences bundle adjustment and map fusion.
+
+**Expected Impact:**  
+- Improved localization in dynamic scenes.  
+- Dense, metrically accurate maps that maintain real-time performance.  
+- Potential extension to real robots or AR/VR applications.
+
+
 ---
 ## Experimental Overview
 Experiments are based on **HI-SLAM2**. Full setup, data preparation, and evaluation steps are in [`experiments/README.md`](experiments/README.md).
