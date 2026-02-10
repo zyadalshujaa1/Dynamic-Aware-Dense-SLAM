@@ -48,7 +48,7 @@ There is no existing framework that simultaneously:
 - VI-NeRF-SLAM and HI-SLAM2 focus on **dense reconstruction and real-time performance**, but assume static scenes.  
 - **Gap / Opportunity:** No method combines **dense monocular reconstruction + dynamic object awareness + real-time efficiency**. This is where a student project or proposed extension can focus.
 
-
+---
 ## 3. Hypothesis
 
 A temporally consistent, **motion-aware segmentation approach**, combined with **sparse-to-dense neural and Gaussian reconstruction**, can:
@@ -80,9 +80,7 @@ Experiments are based on **HI-SLAM2**. Full setup, data preparation, and evaluat
 | NICER-SLAM    | 2.45          | 2.50            | 95.1                 |
 | Splat-SLAM    | 2.10          | 2.15            | 96.0                 |
 
-> *Note: These results are adapted from Zhang et al. (2024), simulating a run on the demo Replica dataset.*
 
-**Comment:** HI-SLAM2 achieves the highest reconstruction accuracy and completeness among compared methods, indicating strong geometric fidelity. Potential improvements include handling dynamic objects and extreme lighting conditions.
 
 ### 2. System Overview
 ![HI-SLAM2 Pipeline](figures/hi_slam2_pipeline.png)
