@@ -160,7 +160,7 @@ Experiments are based on **HI-SLAM2**. Full setup, data preparation, and evaluat
    - Scatter plot  heatmap showing **per-point confidence vs. reconstruction error**.  
    ![Confidence vs Error](figures/confidence_vs_error.png)
 
-> *Note: These plots can be generated using the `experiments/` dataset and evaluation scripts.*
+
 
 ---
 
