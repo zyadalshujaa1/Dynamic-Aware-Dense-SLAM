@@ -66,7 +66,6 @@ This approach bridges the gap between:
 
 ## Proposed Idea: Confidence-Weighted Dynamic Dense SLAM
 
-**Description:**  
 We propose a dynamic-aware dense SLAM approach that integrates motion cues and semantic segmentation with a confidence weighting scheme. Points associated with dynamic objects are included in the map but with lower confidence, reducing their impact on localization and reconstruction.
 
 **Motivation:**  
