@@ -153,10 +153,7 @@ Experiments are based on **HI-SLAM2**. Full setup, data preparation, and evaluat
     
    ![Dense Map Comparison](figures/dense_map_comparison.png)
 
-3. **FPS / Performance Chart**  
-   - Bar chart showing **frame rate comparison**  baseline و proposed approach.
-     
-   ![FPS Comparison](figures/fps_comparison.png)
+
 
 4. **Impact of Confidence Weighting**  
    - Scatter plot  heatmap showing **per-point confidence vs. reconstruction error**.  
