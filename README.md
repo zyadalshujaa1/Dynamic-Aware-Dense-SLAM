@@ -111,32 +111,61 @@ Experiments are based on **HI-SLAM2**. Full setup, data preparation, and evaluat
 ![Meshes](figures/scannet_meshes.png)
 > *Reconstructed meshes of selected sequences: simulated demo.*
 
+## 6. Expected Results and Discussion
+
+### Localization Improvement
+- Confidence-weighted dynamic points are expected to **reduce drift** in dynamic scenes compared to the HI-SLAM2 baseline.
+- Anticipate a significant **reduction in Absolute Trajectory Error (ATE)** on sequences with moving objects.
+
+### Dense Map Quality
+- Dense 3D reconstruction remains **mostly intact**, including dynamic objects, but their influence is **scaled down based on confidence**.
+- Slight smoothing in moving object regions is expected due to lower confidence weighting.
+
+### Real-Time Performance
+- Minor overhead from confidence-weighted updates.
+- Expected **near real-time performance**: ~20–25 FPS on monocular HI-SLAM2 baseline.
+
+### Comparative Analysis
+| Method                     | Dynamic Handling        | Dense Map | Localization Robustness | FPS |
+|-----------------------------|-----------------------|-----------|------------------------|-----|
+| HI-SLAM2 (baseline)         | None                  | Dense     | Moderate               | 25  |
+| DS-SLAM / DynaSLAM II       | Sparse / Semantic     | Sparse    | High in dynamic areas  | 10–12 |
+| Proposed Confidence-Weighted SLAM | Dense + dynamic-aware | Dense | High                  | 20–25 |
+
+### Potential Challenges
+- Segmentation errors may misclassify static objects as dynamic → affects map confidence.
+- Tuning confidence weights requires experimentation.
+- Extreme occlusion or highly cluttered scenes may still challenge localization.
+
+### Insights & Future Extensions
+- Combine confidence weighting with **semantic labels** for object-aware map fusion.
+- Adaptable for **AR/VR applications** or **robotic navigation** in populated indoor environments.
+- Potential extension to **multi-camera setups** or **multi-robot collaborative mapping**.
+
+### Suggested Plots / Figures
+
+1. **Localization Accuracy Plot**  
+   - Line plot comparing **ATE over time** for HI-SLAM2 baseline vs. proposed method on dynamic sequences.  
+   - *Suggested image file:* `figures/localization_ate_plot.png`
+
+2. **Dense Map Visualization**  
+   - Side-by-side **3D reconstruction** with and without confidence weighting.  
+   - Highlight moving objects with lower confidence in a different color.  
+   - *Suggested image file:* `figures/dense_map_comparison.png`
+
+3. **FPS / Performance Chart**  
+   - Bar chart showing **frame rate comparison** between baseline and proposed approach.  
+   - *Suggested image file:* `figures/fps_comparison.png`
+
+4. **Impact of Confidence Weighting**  
+   - Scatter plot or heatmap showing **per-point confidence vs. reconstruction error**.  
+   - *Suggested image file:* `figures/confidence_vs_error.png`
+
+> *Note: These plots can be generated using the `experiments/` dataset and evaluation scripts.*
+
+---
 
 
-## 6. Discussion & Insights
-
-In this section, we reflect on the findings from HI-SLAM2 and analyze what can be learned for future work in dynamic-aware dense SLAM.
-
-- **Key Takeaways:**
-  - HI-SLAM2 demonstrates that combining monocular priors with 3D Gaussian Splatting can achieve both accurate geometry and high-quality renderings.
-  - Decoupling tracking from mapping initially, while coupling them during joint optimization, is an effective strategy to maintain global consistency without sacrificing real-time performance.
-  - The system excels in synthetic datasets like Replica, but struggles with dynamic objects and extreme lighting conditions, highlighting the importance of robustness in real-world scenarios.
-
-- **Implications for Our Project:**
-  - Leveraging monocular geometry priors can enhance dense reconstruction even in lightweight setups.
-  - Incorporating a hybrid pipeline where motion-aware segmentation is used to filter dynamic features could improve map accuracy in human-populated indoor environments.
-  - The Gaussian map representation allows for efficient updates after loop closure, a concept that can be integrated into our proposed system to maintain consistent dense maps.
-
-- **Open Challenges:**
-  - Handling dynamic agents: HI-SLAM2 assumes a static world, so integrating motion-aware modules is necessary for real-world applications.
-  - Lighting and texture variations: Robustness to illumination changes remains an open problem, especially in indoor/outdoor transitions.
-  - Scalability: For very large-scale environments, optimization and memory management for dense Gaussian maps could become a bottleneck.
-
-- **Student Perspective / Reflection:**
-  - From my perspective, the paper offers strong insights into dense monocular SLAM, and it provides a concrete foundation for experimenting with dynamic-aware dense mapping.
-  - Implementing simplified simulations based on this pipeline helps understand the trade-offs between accuracy, runtime, and map density.
-  - Future experiments can explore combining semantic segmentation, motion filtering, and Gaussian mapping to achieve a system that is both real-time and robust in dynamic environments.
- 
 
 ## Conclusion
 
